@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exam Prep HQ | Upper School Exam Prep</title>
+  <meta name="description" content="Plan, organize, and study for semester exams. Built for Woodward Academy Upper School students.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📚%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="brick">
+      <div class="topbar-inner">
+        <a class="brand" href="#home" id="brand"></a>
+        <div class="account" id="account"></div>
+      </div>
+    </div>
+    <nav class="tabs" aria-label="Main">
+      <div class="tabs-inner" id="tabs"></div>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1"></main>
+
+  <footer>
+    <p><a href="#tips/help">How do I…?</a></p>
+    <p>Exam Prep HQ is a study planning tool for students. It isn't connected to your gradebook, so it only knows what you type in. If you're feeling really stressed, talk to a parent, your advisor, or a school counselor.</p>
+  </footer>
+
+  <input type="file" id="backup-input" accept=".json,application/json" hidden>
+  <dialog id="modal"></dialog>
+  <dialog id="focus" class="focus" aria-label="Study session"></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/content.js"></script>
+  <!-- Always load the newest study guides (skips old saved copies in the browser) -->
+  <script>document.write('<script src="js/guides.js?v=' + Date.now() + '"><\/script>');</script>
+  <script src="js/store.js"></script>
+  <script src="js/planner.js"></script>
+  <script src="js/drive.js"></script>
+  <script src="js/studyguide.js"></script>
+  <script src="js/exports.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
